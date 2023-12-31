@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Jquery Assignment Task </title>
+    <style>
+       body{
+        padding: 10px;
+       }
+       .box{
+        padding: 10px;
+        width: 40%;
+       }
+       .box ul{
+        padding: 10px;   
+        
+       }
+       .box ul li{
+        padding: 10px;   
+
+       }
+       .box ul li input{
+         margin: 0 auto;
+       }
+    </style>
+</head>
+<body>
+ great great grand parent 
+        <div class="box">
+            great grand parent
+            <ul type="none" id="gp">
+                grand parent
+                <li id="dp"> direct parent <br> 
+                <input type="text" placeholder="text" id="child">
+                </li>
+            </ul>
+        </div>
+    
+    
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+          var a = $("#child").parentsUntil(window)
+          a.css("border","2px solid red")
+        })
+    </script>
+</body>
+</html>
